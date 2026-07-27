@@ -25,7 +25,6 @@ The Reference Frame includes the optional `alternate-system` leaf (guarded by th
 classDiagram
     class ReferenceFrame {
         +String alternateSystem [0..1]
-        +Boolean alternateSystems [0..1]
         +String astronomicalBody [0..1]
     }
     class GeodeticSystem {

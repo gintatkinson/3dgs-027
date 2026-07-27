@@ -39,11 +39,36 @@ classDiagram
     class GeoLocation {
         +String timestamp [0..1]
         +String validUntil [0..1]
+        +Status setTimestamp(String time) [1]
+        +ValidityResult checkValidity(String currentTime) [1]
+        +Status setCoordinates(String coordinateSystem, Coordinates coords) [1]
+        +SpeedHeadingResult requestSpeedAndHeading(String timestamp) [1]
+        +Cartesian convertToCartesian(String geodeticDatum) [1]
+        +Ellipsoid convertToEllipsoid(String geodeticDatum) [1]
+        +Location projectPosition(Real deltaTime) [1]
+        +EffectiveReferenceFrame getEffectiveReferenceFrame() [1]
+        +EffectiveReferenceFrame getEffectiveGeodeticDatum() [1]
+        +Status inheritFromParent(GeoLocation parent) [1]
+        +Status overrideReferenceFrame(ReferenceFrame newFrame) [1]
+        +Status enableAlternateSystem(String alternateSystemId) [1]
+        +Status clearAlternateSystem() [1]
+        +Status switchToEllipsoid(Coordinates coordinates) [1]
+        +Status create(GeoLocation attachedTo) [1]
+        +Boolean checkOwnReferenceFrame() [1]
+        +Boolean checkHasInheritedFrame() [1]
+        +Status setOwnReferenceFrame(ReferenceFrame newFrame) [1]
+        +String readAstronomicalBody() [1]
+        +String readGeodeticDatum() [1]
+        +String readValidUntil() [1]
+        +ReferenceFrame getReferenceFrame() [1]
     }
     class ReferenceFrame {
         +String alternateSystem [0..1]
         +Boolean alternateSystems [0..1]
         +String astronomicalBody [0..1]
+        +Status setAlternateSystem(String alternateSystemId) [1]
+        +Status resetToNaturalUniverse() [1]
+        +ReferenceFrame getReferenceFrame() [1]
     }
     class GeodeticSystem {
         +String geodeticDatum [0..1]
@@ -68,6 +93,68 @@ classDiagram
     class Location {
         <<choice>>
     }
+    class VelocityCalculator {
+        <<service>>
+        +Real computeSpeed(Real vNorth, Real vEast) [1]
+        +Real computeHeading(Real vNorth, Real vEast) [1]
+    }
+    class GeodeticCalculator {
+        <<service>>
+        +EllipsoidParams getEllipsoidParameters(String geodeticDatum) [1]
+        +Cartesian ellipsoidToCartesian(Real lat, Real lon, Real h, EllipsoidParams params) [1]
+        +Ellipsoid cartesianToEllipsoid(Real x, Real y, Real z, EllipsoidParams params) [1]
+    }
+    class ClockService {
+        <<service>>
+        +ComparisonResult compare(String currentTime, String validUntil) [1]
+    }
+    class MotionProjector {
+        <<service>>
+        +Location interpolate(Real lat, Real lon, Real h, Real vN, Real vE, Real vU, Real deltaTime, String datum) [1]
+    }
+    class DefaultResolver {
+        <<service>>
+        +String resolveDefaultAstronomicalBody() [1]
+        +String resolveDefaultGeodeticDatum(String astronomicalBody) [1]
+    }
+    class ReferenceFrameResolver {
+        <<service>>
+        +ReferenceFrame inheritFromParent(GeoLocation parent) [1]
+    }
+    class LocationStrategy {
+        <<service>>
+        +Status activateEllipsoid(Coordinates coords) [1]
+        +Status activateCartesian(Coordinates coords) [1]
+        +Status replaceCartesianWithEllipsoid(Coordinates coords) [1]
+    }
+    class FeatureChecker {
+        <<service>>
+        +Boolean isFeatureEnabled(String featureName) [1]
+    }
+    class HierarchyManager {
+        <<external>>
+    }
+    class LocationTransformer {
+        <<external>>
+    }
+    class TrajectoryProjector {
+        <<external>>
+    }
+    class LocationInterpreter {
+        <<external>>
+    }
+    class LocationValidator {
+        <<external>>
+    }
+    class SystemConfigurator {
+        <<external>>
+    }
+    class LocationConsumer {
+        <<external>>
+    }
+    class LocationRecorder {
+        <<external>>
+    }
 
     GeoLocation *-- ReferenceFrame
     ReferenceFrame *-- GeodeticSystem
@@ -75,6 +162,22 @@ classDiagram
     Location <|-- Ellipsoid
     Location <|-- Cartesian
     GeoLocation *-- Velocity
+    GeoLocation --> VelocityCalculator
+    GeoLocation --> GeodeticCalculator
+    GeoLocation --> ClockService
+    GeoLocation --> MotionProjector
+    GeoLocation --> DefaultResolver
+    GeoLocation --> ReferenceFrameResolver
+    GeoLocation --> LocationStrategy
+    GeoLocation --> FeatureChecker
+    HierarchyManager ..> GeoLocation
+    LocationTransformer ..> GeoLocation
+    TrajectoryProjector ..> GeoLocation
+    LocationInterpreter ..> GeoLocation
+    LocationValidator ..> GeoLocation
+    SystemConfigurator ..> GeoLocation
+    LocationConsumer ..> GeoLocation
+    LocationRecorder ..> GeoLocation
 ```
 
 ### System State Machine Diagram
