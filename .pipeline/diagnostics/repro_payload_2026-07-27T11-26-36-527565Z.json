@@ -1,0 +1,49 @@
+{
+  "timestamp": "2026-07-27T11:26:36.527565Z",
+  "tooling": {
+    "name": "parity_auditor",
+    "version": "1.0.0"
+  },
+  "context": {
+    "command": "./skills/spec-orchestrator/scripts/verify_model_coverage.py --spec-only --allow-missing-specs",
+    "exit_code": 1,
+    "downstream_repo": "https://github.com/gintatkinson/3dgs-027.git",
+    "commit_hash": "37573ebbea9591329cab038764cca66143edb8c6"
+  },
+  "failure": {
+    "traceback": "",
+    "error_summary": [
+      "User Story us-15-verify-rack-power-capacity.md sequence diagram lifeline 'capacityPlanner' specifies classifier 'CapacityPlanner' which is not defined in any feature class diagram.",
+      "User Story us-15-verify-rack-power-capacity.md sequence diagram message 'capacityPlanner->>rackRecord: validatePowerCapacity(rackId: String, proposedLoad: Integer)' calls operation 'validatePowerCapacity' which is not defined on class 'Rack' in any class diagram.",
+      "User Story us-15-verify-rack-power-capacity.md sequence diagram message 'rackRecord->>rackRecord: getMaxAllocatedPower()' calls operation 'getMaxAllocatedPower' which is not defined on class 'Rack' in any class diagram.",
+      "User Story us-15-verify-rack-power-capacity.md sequence diagram message 'capacityPlannerService->>capacityPlannerService: sumChassisPower()' calls operation 'sumChassisPower' which is not defined on class 'RackCapacityPlanner' in any class diagram.",
+      "User Story us-09-paginate-location-queries.md sequence diagram lifeline 'managementClient' specifies classifier 'ManagementClient' which is not defined in any feature class diagram.",
+      "User Story us-09-paginate-location-queries.md sequence diagram message 'managementClient->>locationsContainer: listLocations(filter: String)' calls operation 'listLocations' which is not defined on class 'Locations' in any class diagram.",
+      "User Story us-10-verify-dispatch-readiness.md sequence diagram lifeline 'fieldDispatcher' specifies classifier 'FieldDispatcher' which is not defined in any feature class diagram.",
+      "User Story us-10-verify-dispatch-readiness.md sequence diagram message 'fieldDispatcher->>locationRecord: validateForDispatch(locationId: String)' calls operation 'validateForDispatch' which is not defined on class 'Location' in any class diagram.",
+      "User Story us-10-verify-dispatch-readiness.md sequence diagram message 'locationRecord->>locationRecord: getValidUntil()' calls operation 'getValidUntil' which is not defined on class 'Location' in any class diagram.",
+      "User Story us-14-detect-location-cycle.md sequence diagram lifeline 'locationConfigurator' specifies classifier 'LocationConfigurator' which is not defined in any feature class diagram.",
+      "User Story us-14-detect-location-cycle.md sequence diagram message 'locationConfigurator->>locationRecord: setParent(childId: String, proposedParentId: String)' calls operation 'setParent' which is not defined on class 'Location' in any class diagram.",
+      "User Story us-14-detect-location-cycle.md sequence diagram message 'hierarchyNavigator->>hierarchyNavigator: resolveParent(currentId: String)' calls operation 'resolveParent' which is not defined on class 'HierarchyNavigator' in any class diagram.",
+      "User Story us-11-traverse-location-hierarchy.md sequence diagram lifeline 'locationNavigator' specifies classifier 'LocationNavigator' which is not defined in any feature class diagram.",
+      "User Story us-11-traverse-location-hierarchy.md sequence diagram message 'locationNavigator->>locationRecord: getAncestors(locationId: String)' calls operation 'getAncestors' which is not defined on class 'Location' in any class diagram.",
+      "User Story us-11-traverse-location-hierarchy.md sequence diagram message 'locationRecord->>hierarchyNavigator: resolveParent(locationId: String)' calls operation 'resolveParent' which is not defined on class 'HierarchyNavigator' in any class diagram.",
+      "User Story us-11-traverse-location-hierarchy.md sequence diagram message 'locationNavigator->>locationRecord: getDescendants(locationId: String)' calls operation 'getDescendants' which is not defined on class 'Location' in any class diagram.",
+      "User Story us-11-traverse-location-hierarchy.md sequence diagram message 'locationRecord->>hierarchyNavigator: findChildren(parentId: String)' calls operation 'findChildren' which is not defined on class 'HierarchyNavigator' in any class diagram.",
+      "User Story us-11-traverse-location-hierarchy.md sequence diagram message 'locationRecord->>hierarchyNavigator: findChildren(parentId: String)' calls operation 'findChildren' which is not defined on class 'HierarchyNavigator' in any class diagram.",
+      "User Story us-16-detect-rack-grid-collisions.md sequence diagram lifeline 'facilityManager' specifies classifier 'FacilityManager' which is not defined in any feature class diagram.",
+      "User Story us-16-detect-rack-grid-collisions.md sequence diagram message 'facilityManager->>rackLocation: assignLocation(locationRef: String, rowNumber: Integer, columnNumber: Integer)' calls operation 'assignLocation' which is not defined on class 'RackLocation' in any class diagram.",
+      "User Story us-16-detect-rack-grid-collisions.md sequence diagram message 'gridChecker->>gridChecker: checkRowAndColumn(rowNumber: Integer, columnNumber: Integer)' calls operation 'checkRowAndColumn' which is not defined on class 'GridPositionChecker' in any class diagram.",
+      "User Story us-12-filter-locations-by-type.md sequence diagram lifeline 'inventoryManager' specifies classifier 'InventoryManager' which is not defined in any feature class diagram.",
+      "User Story us-12-filter-locations-by-type.md sequence diagram message 'inventoryManager->>locationsContainer: listLocations(filter: String)' calls operation 'listLocations' which is not defined on class 'Locations' in any class diagram.",
+      "User Story us-12-filter-locations-by-type.md sequence diagram message 'locationsContainer->>locationList: getType()' calls operation 'getType' which is not defined on class 'Location' in any class diagram.",
+      "User Story us-13-validate-country-code.md sequence diagram lifeline 'patternValidator' specifies classifier 'PatternValidator' which is not defined in any feature class diagram.",
+      "User Story us-13-validate-country-code.md sequence diagram message 'locationRecorder->>physicalAddress: setCountryCode(code: String)' calls operation 'setCountryCode' which is not defined on class 'PhysicalAddress' in any class diagram."
+    ]
+  },
+  "reproduction_case": {
+    "target_file": "",
+    "snippet_type": "text",
+    "snippet_content": ""
+  }
+}

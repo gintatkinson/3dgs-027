@@ -1,0 +1,39 @@
+{
+  "timestamp": "2026-07-27T10:58:19.523503Z",
+  "tooling": {
+    "name": "parity_auditor",
+    "version": "1.0.0"
+  },
+  "context": {
+    "command": "./skills/spec-orchestrator/scripts/verify_model_coverage.py --spec-only --allow-missing-specs",
+    "exit_code": 1,
+    "downstream_repo": "https://github.com/gintatkinson/3dgs-027.git",
+    "commit_hash": "8ef1b728b3709c16b989f3ad9d641a9c8949e43b"
+  },
+  "failure": {
+    "traceback": "",
+    "error_summary": [
+      "Feature feat-02-reference-frame.md contains unresolved placeholder 'IssueID' or '#[IssueID]'.",
+      "Feature feat-01-geo-location-container.md contains unresolved placeholder 'IssueID' or '#[IssueID]'.",
+      "Feature feat-05-cartesian-coordinates.md contains unresolved placeholder 'IssueID' or '#[IssueID]'.",
+      "Feature feat-06-velocity-vector.md contains unresolved placeholder 'IssueID' or '#[IssueID]'.",
+      "Feature feat-04-ellipsoidal-coordinates.md contains unresolved placeholder 'IssueID' or '#[IssueID]'.",
+      "Feature feat-03-geodetic-system.md contains unresolved placeholder 'IssueID' or '#[IssueID]'.",
+      "Epic epic-01-geo-location-specification.md contains unresolved placeholder 'IssueID' or '#[IssueID]'.",
+      "Epic epic-01-geo-location-specification.md is missing section '## 4. Operational Considerations'.",
+      "Epic epic-01-geo-location-specification.md is missing section '## 5. Security & Governance'.",
+      "Epic epic-01-geo-location-specification.md contains a UML Class Diagram with no relationships. Isolated classes are prohibited; you must illustrate containment/inheritance/choice composition.",
+      "Epic epic-01-geo-location-specification.md contains class 'GeoLocationSubsystem' with zero relationships. Isolated classes are prohibited.",
+      "Epic epic-01-geo-location-specification.md class 'GeoLocationSubsystem' attribute 'geoLocation' has invalid type 'GeoLocation'. UML primitive types must be Boolean, Decimal64, Integer, Real, String (case-sensitive), or reference another class.",
+      "Epic epic-01-geo-location-specification.md class 'GeoLocationSubsystem' attribute 'geoLocation' is missing a multiplicity (e.g. [1], [0..1], [0..*]).",
+      "Epic epic-01-geo-location-specification.md class 'GeoLocationSubsystem' method 'recordLocation' is missing a multiplicity (e.g. [1], [0..1], [0..*]) in its return signature.",
+      "Epic epic-01-geo-location-specification.md class 'GeoLocationSubsystem' method 'queryLocation' is missing a multiplicity (e.g. [1], [0..1], [0..*]) in its return signature.",
+      "Epic epic-01-geo-location-specification.md class 'GeoLocationSubsystem' method 'validateCoordinates' is missing a multiplicity (e.g. [1], [0..1], [0..*]) in its return signature."
+    ]
+  },
+  "reproduction_case": {
+    "target_file": "",
+    "snippet_type": "text",
+    "snippet_content": ""
+  }
+}

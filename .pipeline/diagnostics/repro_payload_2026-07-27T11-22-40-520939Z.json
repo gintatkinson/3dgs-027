@@ -1,0 +1,32 @@
+{
+  "timestamp": "2026-07-27T11:22:40.520939Z",
+  "tooling": {
+    "name": "parity_auditor",
+    "version": "1.0.0"
+  },
+  "context": {
+    "command": "./skills/spec-orchestrator/scripts/verify_model_coverage.py --spec-only --allow-missing-specs",
+    "exit_code": 1,
+    "downstream_repo": "https://github.com/gintatkinson/3dgs-027.git",
+    "commit_hash": "529928a9580578dec54053263fed56126f73b8b8"
+  },
+  "failure": {
+    "traceback": "",
+    "error_summary": [
+      "Feature feat-13-rack-location.md contains unresolved placeholder 'IssueID' or '#[IssueID]'.",
+      "Feature feat-07-locations-container.md contains unresolved placeholder 'IssueID' or '#[IssueID]'.",
+      "Feature feat-11-racks-container.md contains unresolved placeholder 'IssueID' or '#[IssueID]'.",
+      "Feature feat-11-racks-container.md subsystem component class 'Locations' is empty. Subsystem components must define at least one attribute or operation.",
+      "Feature feat-09-physical-address.md contains unresolved placeholder 'IssueID' or '#[IssueID]'.",
+      "Feature feat-12-rack-entity.md contains unresolved placeholder 'IssueID' or '#[IssueID]'.",
+      "Feature feat-14-rack-contained-chassis.md contains unresolved placeholder 'IssueID' or '#[IssueID]'.",
+      "Feature feat-10-location-contained-chassis.md contains unresolved placeholder 'IssueID' or '#[IssueID]'.",
+      "Feature feat-08-location-entity.md contains unresolved placeholder 'IssueID' or '#[IssueID]'."
+    ]
+  },
+  "reproduction_case": {
+    "target_file": "",
+    "snippet_type": "text",
+    "snippet_content": ""
+  }
+}

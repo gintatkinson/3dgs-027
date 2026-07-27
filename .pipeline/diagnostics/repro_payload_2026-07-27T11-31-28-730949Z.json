@@ -1,0 +1,29 @@
+{
+  "timestamp": "2026-07-27T11:31:28.730949Z",
+  "tooling": {
+    "name": "parity_auditor",
+    "version": "1.0.0"
+  },
+  "context": {
+    "command": "./skills/spec-orchestrator/scripts/verify_model_coverage.py --spec-only --allow-missing-specs",
+    "exit_code": 1,
+    "downstream_repo": "https://github.com/gintatkinson/3dgs-027.git",
+    "commit_hash": "194259ff458f9dd5c132d0c4d4d1880223abc19d"
+  },
+  "failure": {
+    "traceback": "",
+    "error_summary": [
+      "Use Case uc-07-register-physical-location.md must contain at least 15 detailed Alternate/Exception flows. Found only 5 flows. (Referenced features define 15 schema validation constraints, requiring at least that many alternate flows, with a minimum floor of 2.)",
+      "Use Case uc-08-manage-location-hierarchy.md must contain at least 15 detailed Alternate/Exception flows. Found only 5 flows. (Referenced features define 15 schema validation constraints, requiring at least that many alternate flows, with a minimum floor of 2.)",
+      "Use Case uc-11-deploy-chassis-to-rack.md must contain at least 21 detailed Alternate/Exception flows. Found only 6 flows. (Referenced features define 21 schema validation constraints, requiring at least that many alternate flows, with a minimum floor of 2.)",
+      "Use Case uc-12-deploy-chassis-to-location.md must contain at least 16 detailed Alternate/Exception flows. Found only 6 flows. (Referenced features define 16 schema validation constraints, requiring at least that many alternate flows, with a minimum floor of 2.)",
+      "Use Case uc-09-record-physical-address.md must contain at least 18 detailed Alternate/Exception flows. Found only 5 flows. (Referenced features define 18 schema validation constraints, requiring at least that many alternate flows, with a minimum floor of 2.)",
+      "Use Case uc-10-assign-rack-to-room.md must contain at least 25 detailed Alternate/Exception flows. Found only 6 flows. (Referenced features define 25 schema validation constraints, requiring at least that many alternate flows, with a minimum floor of 2.)"
+    ]
+  },
+  "reproduction_case": {
+    "target_file": "",
+    "snippet_type": "text",
+    "snippet_content": ""
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "timestamp": "2026-07-27T11:02:26.101988Z",
+  "tooling": {
+    "name": "parity_auditor",
+    "version": "1.0.0"
+  },
+  "context": {
+    "command": "./skills/spec-orchestrator/scripts/verify_model_coverage.py --spec-only --allow-missing-specs",
+    "exit_code": 1,
+    "downstream_repo": "https://github.com/gintatkinson/3dgs-027.git",
+    "commit_hash": "8ef1b728b3709c16b989f3ad9d641a9c8949e43b"
+  },
+  "failure": {
+    "traceback": "",
+    "error_summary": [
+      "Feature feat-02-reference-frame.md contains unresolved placeholder 'IssueID' or '#[IssueID]'.",
+      "Feature feat-02-reference-frame.md class 'ReferenceFrame' attribute 'alternateSystems' is missing a multiplicity (e.g. [1], [0..1], [0..*]).",
+      "Feature feat-01-geo-location-container.md contains unresolved placeholder 'IssueID' or '#[IssueID]'.",
+      "Feature feat-05-cartesian-coordinates.md contains unresolved placeholder 'IssueID' or '#[IssueID]'.",
+      "Feature feat-06-velocity-vector.md contains unresolved placeholder 'IssueID' or '#[IssueID]'.",
+      "Feature feat-04-ellipsoidal-coordinates.md contains unresolved placeholder 'IssueID' or '#[IssueID]'.",
+      "Feature feat-03-geodetic-system.md contains unresolved placeholder 'IssueID' or '#[IssueID]'.",
+      "Epic epic-01-geo-location-specification.md contains unresolved placeholder 'IssueID' or '#[IssueID]'.",
+      "Epic epic-01-geo-location-specification.md class 'ReferenceFrame' attribute 'alternateSystems' is missing a multiplicity (e.g. [1], [0..1], [0..*])."
+    ]
+  },
+  "reproduction_case": {
+    "target_file": "",
+    "snippet_type": "text",
+    "snippet_content": ""
+  }
+}

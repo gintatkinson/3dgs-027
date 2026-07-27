@@ -1,0 +1,70 @@
+{
+  "timestamp": "2026-07-27T11:08:41.104245Z",
+  "tooling": {
+    "name": "parity_auditor",
+    "version": "1.0.0"
+  },
+  "context": {
+    "command": "./skills/spec-orchestrator/scripts/verify_model_coverage.py --spec-only",
+    "exit_code": 1,
+    "downstream_repo": "https://github.com/gintatkinson/3dgs-027.git",
+    "commit_hash": "635c6778208b70f70832e0c1814b431503b6a128"
+  },
+  "failure": {
+    "traceback": "",
+    "error_summary": [
+      "User Story us-07-inherit-reference-frame.md sequence diagram lifeline 'hierarchyManager' specifies classifier 'HierarchyManager' which is not defined in any feature class diagram.",
+      "User Story us-07-inherit-reference-frame.md sequence diagram message 'hierarchyManager->>childLocation: create(attachedTo: parentLocation)' calls operation 'create' which is not defined on class 'GeoLocation' in any class diagram.",
+      "User Story us-07-inherit-reference-frame.md sequence diagram message 'childLocation->>childLocation: checkOwnReferenceFrame()' calls operation 'checkOwnReferenceFrame' which is not defined on class 'GeoLocation' in any class diagram.",
+      "User Story us-07-inherit-reference-frame.md sequence diagram message 'referenceFrameResolver->>parentLocation: getReferenceFrame()' calls operation 'getReferenceFrame' which is not defined on class 'GeoLocation' in any class diagram.",
+      "User Story us-07-inherit-reference-frame.md sequence diagram message 'childLocation->>childLocation: checkHasInheritedFrame()' calls operation 'checkHasInheritedFrame' which is not defined on class 'GeoLocation' in any class diagram.",
+      "User Story us-07-inherit-reference-frame.md sequence diagram message 'childLocation->>childLocation: setOwnReferenceFrame(newFrame: ReferenceFrame)' calls operation 'setOwnReferenceFrame' which is not defined on class 'GeoLocation' in any class diagram.",
+      "User Story us-02-coordinate-conversion.md sequence diagram lifeline 'locationTransformer' specifies classifier 'LocationTransformer' which is not defined in any feature class diagram.",
+      "User Story us-04-project-position.md sequence diagram lifeline 'trajectoryProjector' specifies classifier 'TrajectoryProjector' which is not defined in any feature class diagram.",
+      "User Story us-06-resolve-defaults.md sequence diagram lifeline 'locationInterpreter' specifies classifier 'LocationInterpreter' which is not defined in any feature class diagram.",
+      "User Story us-06-resolve-defaults.md sequence diagram message 'geoLocationRecord->>geoLocationRecord: readAstronomicalBody()' calls operation 'readAstronomicalBody' which is not defined on class 'GeoLocation' in any class diagram.",
+      "User Story us-06-resolve-defaults.md sequence diagram message 'geoLocationRecord->>geoLocationRecord: readGeodeticDatum()' calls operation 'readGeodeticDatum' which is not defined on class 'GeoLocation' in any class diagram.",
+      "User Story us-03-validity-expiration.md sequence diagram lifeline 'locationValidator' specifies classifier 'LocationValidator' which is not defined in any feature class diagram.",
+      "User Story us-03-validity-expiration.md sequence diagram message 'geoLocationRecord->>geoLocationRecord: readValidUntil()' calls operation 'readValidUntil' which is not defined on class 'GeoLocation' in any class diagram.",
+      "User Story us-08-alternate-system.md sequence diagram lifeline 'systemConfigurator' specifies classifier 'SystemConfigurator' which is not defined in any feature class diagram.",
+      "User Story us-01-calculate-speed-heading.md sequence diagram lifeline 'locationConsumer' specifies classifier 'LocationConsumer' which is not defined in any feature class diagram.",
+      "User Story us-05-select-coordinate-system.md sequence diagram lifeline 'locationRecorder' specifies classifier 'LocationRecorder' which is not defined in any feature class diagram.",
+      "Epic epic-01-geo-location-specification.md class 'GeoLocation' method 'setTimestamp' is missing a multiplicity (e.g. [1], [0..1], [0..*]) in its return signature.",
+      "Epic epic-01-geo-location-specification.md class 'GeoLocation' method 'checkValidity' is missing a multiplicity (e.g. [1], [0..1], [0..*]) in its return signature.",
+      "Epic epic-01-geo-location-specification.md class 'GeoLocation' method 'setCoordinates' is missing a multiplicity (e.g. [1], [0..1], [0..*]) in its return signature.",
+      "Epic epic-01-geo-location-specification.md class 'GeoLocation' method 'requestSpeedAndHeading' is missing a multiplicity (e.g. [1], [0..1], [0..*]) in its return signature.",
+      "Epic epic-01-geo-location-specification.md class 'GeoLocation' method 'convertToCartesian' is missing a multiplicity (e.g. [1], [0..1], [0..*]) in its return signature.",
+      "Epic epic-01-geo-location-specification.md class 'GeoLocation' method 'convertToEllipsoid' is missing a multiplicity (e.g. [1], [0..1], [0..*]) in its return signature.",
+      "Epic epic-01-geo-location-specification.md class 'GeoLocation' method 'projectPosition' is missing a multiplicity (e.g. [1], [0..1], [0..*]) in its return signature.",
+      "Epic epic-01-geo-location-specification.md class 'GeoLocation' method 'getEffectiveReferenceFrame' is missing a multiplicity (e.g. [1], [0..1], [0..*]) in its return signature.",
+      "Epic epic-01-geo-location-specification.md class 'GeoLocation' method 'getEffectiveGeodeticDatum' is missing a multiplicity (e.g. [1], [0..1], [0..*]) in its return signature.",
+      "Epic epic-01-geo-location-specification.md class 'GeoLocation' method 'inheritFromParent' is missing a multiplicity (e.g. [1], [0..1], [0..*]) in its return signature.",
+      "Epic epic-01-geo-location-specification.md class 'GeoLocation' method 'overrideReferenceFrame' is missing a multiplicity (e.g. [1], [0..1], [0..*]) in its return signature.",
+      "Epic epic-01-geo-location-specification.md class 'GeoLocation' method 'enableAlternateSystem' is missing a multiplicity (e.g. [1], [0..1], [0..*]) in its return signature.",
+      "Epic epic-01-geo-location-specification.md class 'GeoLocation' method 'clearAlternateSystem' is missing a multiplicity (e.g. [1], [0..1], [0..*]) in its return signature.",
+      "Epic epic-01-geo-location-specification.md class 'GeoLocation' method 'switchToEllipsoid' is missing a multiplicity (e.g. [1], [0..1], [0..*]) in its return signature.",
+      "Epic epic-01-geo-location-specification.md class 'ReferenceFrame' method 'setAlternateSystem' is missing a multiplicity (e.g. [1], [0..1], [0..*]) in its return signature.",
+      "Epic epic-01-geo-location-specification.md class 'ReferenceFrame' method 'resetToNaturalUniverse' is missing a multiplicity (e.g. [1], [0..1], [0..*]) in its return signature.",
+      "Epic epic-01-geo-location-specification.md class 'ReferenceFrame' method 'getReferenceFrame' is missing a multiplicity (e.g. [1], [0..1], [0..*]) in its return signature.",
+      "Epic epic-01-geo-location-specification.md class 'VelocityCalculator' method 'computeSpeed' is missing a multiplicity (e.g. [1], [0..1], [0..*]) in its return signature.",
+      "Epic epic-01-geo-location-specification.md class 'VelocityCalculator' method 'computeHeading' is missing a multiplicity (e.g. [1], [0..1], [0..*]) in its return signature.",
+      "Epic epic-01-geo-location-specification.md class 'GeodeticCalculator' method 'getEllipsoidParameters' is missing a multiplicity (e.g. [1], [0..1], [0..*]) in its return signature.",
+      "Epic epic-01-geo-location-specification.md class 'GeodeticCalculator' method 'ellipsoidToCartesian' is missing a multiplicity (e.g. [1], [0..1], [0..*]) in its return signature.",
+      "Epic epic-01-geo-location-specification.md class 'GeodeticCalculator' method 'cartesianToEllipsoid' is missing a multiplicity (e.g. [1], [0..1], [0..*]) in its return signature.",
+      "Epic epic-01-geo-location-specification.md class 'ClockService' method 'compare' is missing a multiplicity (e.g. [1], [0..1], [0..*]) in its return signature.",
+      "Epic epic-01-geo-location-specification.md class 'MotionProjector' method 'interpolate' is missing a multiplicity (e.g. [1], [0..1], [0..*]) in its return signature.",
+      "Epic epic-01-geo-location-specification.md class 'DefaultResolver' method 'resolveDefaultAstronomicalBody' is missing a multiplicity (e.g. [1], [0..1], [0..*]) in its return signature.",
+      "Epic epic-01-geo-location-specification.md class 'DefaultResolver' method 'resolveDefaultGeodeticDatum' is missing a multiplicity (e.g. [1], [0..1], [0..*]) in its return signature.",
+      "Epic epic-01-geo-location-specification.md class 'ReferenceFrameResolver' method 'inheritFromParent' is missing a multiplicity (e.g. [1], [0..1], [0..*]) in its return signature.",
+      "Epic epic-01-geo-location-specification.md class 'LocationStrategy' method 'activateEllipsoid' is missing a multiplicity (e.g. [1], [0..1], [0..*]) in its return signature.",
+      "Epic epic-01-geo-location-specification.md class 'LocationStrategy' method 'activateCartesian' is missing a multiplicity (e.g. [1], [0..1], [0..*]) in its return signature.",
+      "Epic epic-01-geo-location-specification.md class 'LocationStrategy' method 'replaceCartesianWithEllipsoid' is missing a multiplicity (e.g. [1], [0..1], [0..*]) in its return signature.",
+      "Epic epic-01-geo-location-specification.md class 'FeatureChecker' method 'isFeatureEnabled' is missing a multiplicity (e.g. [1], [0..1], [0..*]) in its return signature."
+    ]
+  },
+  "reproduction_case": {
+    "target_file": "",
+    "snippet_type": "text",
+    "snippet_content": ""
+  }
+}

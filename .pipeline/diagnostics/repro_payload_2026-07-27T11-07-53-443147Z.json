@@ -1,0 +1,61 @@
+{
+  "timestamp": "2026-07-27T11:07:53.443147Z",
+  "tooling": {
+    "name": "parity_auditor",
+    "version": "1.0.0"
+  },
+  "context": {
+    "command": "./skills/spec-orchestrator/scripts/verify_model_coverage.py --spec-only",
+    "exit_code": 1,
+    "downstream_repo": "https://github.com/gintatkinson/3dgs-027.git",
+    "commit_hash": "635c6778208b70f70832e0c1814b431503b6a128"
+  },
+  "failure": {
+    "traceback": "",
+    "error_summary": [
+      "User Story us-07-inherit-reference-frame.md sequence diagram lifeline 'hierarchyManager' specifies classifier 'HierarchyManager' which is not defined in any feature class diagram.",
+      "User Story us-07-inherit-reference-frame.md sequence diagram lifeline 'referenceFrameResolver' specifies classifier 'ReferenceFrameResolver' which is not defined in any feature class diagram.",
+      "User Story us-07-inherit-reference-frame.md sequence diagram message 'hierarchyManager->>childLocation: create(attachedTo: parentLocation)' calls operation 'create' which is not defined on class 'GeoLocation' in any class diagram.",
+      "User Story us-07-inherit-reference-frame.md sequence diagram message 'childLocation->>childLocation: checkOwnReferenceFrame()' calls operation 'checkOwnReferenceFrame' which is not defined on class 'GeoLocation' in any class diagram.",
+      "User Story us-07-inherit-reference-frame.md sequence diagram message 'referenceFrameResolver->>parentLocation: getReferenceFrame()' calls operation 'getReferenceFrame' which is not defined on class 'GeoLocation' in any class diagram.",
+      "User Story us-07-inherit-reference-frame.md sequence diagram message 'hierarchyManager->>childLocation: overrideReferenceFrame(newFrame: ReferenceFrame)' calls operation 'overrideReferenceFrame' which is not defined on class 'GeoLocation' in any class diagram.",
+      "User Story us-07-inherit-reference-frame.md sequence diagram message 'childLocation->>childLocation: checkHasInheritedFrame()' calls operation 'checkHasInheritedFrame' which is not defined on class 'GeoLocation' in any class diagram.",
+      "User Story us-07-inherit-reference-frame.md sequence diagram message 'childLocation->>childLocation: setOwnReferenceFrame(newFrame: ReferenceFrame)' calls operation 'setOwnReferenceFrame' which is not defined on class 'GeoLocation' in any class diagram.",
+      "User Story us-02-coordinate-conversion.md sequence diagram lifeline 'locationTransformer' specifies classifier 'LocationTransformer' which is not defined in any feature class diagram.",
+      "User Story us-02-coordinate-conversion.md sequence diagram lifeline 'geodeticCalculator' specifies classifier 'GeodeticCalculator' which is not defined in any feature class diagram.",
+      "User Story us-02-coordinate-conversion.md sequence diagram message 'locationTransformer->>geoLocationRecord: convertToCartesian(geodeticDatum: String)' calls operation 'convertToCartesian' which is not defined on class 'GeoLocation' in any class diagram.",
+      "User Story us-02-coordinate-conversion.md sequence diagram message 'locationTransformer->>geoLocationRecord: convertToEllipsoid(geodeticDatum: String)' calls operation 'convertToEllipsoid' which is not defined on class 'GeoLocation' in any class diagram.",
+      "User Story us-04-project-position.md sequence diagram lifeline 'trajectoryProjector' specifies classifier 'TrajectoryProjector' which is not defined in any feature class diagram.",
+      "User Story us-04-project-position.md sequence diagram lifeline 'motionProjector' specifies classifier 'MotionProjector' which is not defined in any feature class diagram.",
+      "User Story us-04-project-position.md sequence diagram message 'trajectoryProjector->>geoLocationRecord: projectPosition(deltaTime: Real)' calls operation 'projectPosition' which is not defined on class 'GeoLocation' in any class diagram.",
+      "User Story us-06-resolve-defaults.md sequence diagram lifeline 'locationInterpreter' specifies classifier 'LocationInterpreter' which is not defined in any feature class diagram.",
+      "User Story us-06-resolve-defaults.md sequence diagram lifeline 'defaultResolver' specifies classifier 'DefaultResolver' which is not defined in any feature class diagram.",
+      "User Story us-06-resolve-defaults.md sequence diagram message 'locationInterpreter->>geoLocationRecord: getEffectiveReferenceFrame()' calls operation 'getEffectiveReferenceFrame' which is not defined on class 'GeoLocation' in any class diagram.",
+      "User Story us-06-resolve-defaults.md sequence diagram message 'geoLocationRecord->>geoLocationRecord: readAstronomicalBody()' calls operation 'readAstronomicalBody' which is not defined on class 'GeoLocation' in any class diagram.",
+      "User Story us-06-resolve-defaults.md sequence diagram message 'locationInterpreter->>geoLocationRecord: getEffectiveGeodeticDatum()' calls operation 'getEffectiveGeodeticDatum' which is not defined on class 'GeoLocation' in any class diagram.",
+      "User Story us-06-resolve-defaults.md sequence diagram message 'geoLocationRecord->>geoLocationRecord: readGeodeticDatum()' calls operation 'readGeodeticDatum' which is not defined on class 'GeoLocation' in any class diagram.",
+      "User Story us-03-validity-expiration.md sequence diagram lifeline 'locationValidator' specifies classifier 'LocationValidator' which is not defined in any feature class diagram.",
+      "User Story us-03-validity-expiration.md sequence diagram lifeline 'clockService' specifies classifier 'ClockService' which is not defined in any feature class diagram.",
+      "User Story us-03-validity-expiration.md sequence diagram message 'locationValidator->>geoLocationRecord: checkValidity(currentTime: String)' calls operation 'checkValidity' which is not defined on class 'GeoLocation' in any class diagram.",
+      "User Story us-03-validity-expiration.md sequence diagram message 'geoLocationRecord->>geoLocationRecord: readValidUntil()' calls operation 'readValidUntil' which is not defined on class 'GeoLocation' in any class diagram.",
+      "User Story us-08-alternate-system.md sequence diagram lifeline 'systemConfigurator' specifies classifier 'SystemConfigurator' which is not defined in any feature class diagram.",
+      "User Story us-08-alternate-system.md sequence diagram lifeline 'featureChecker' specifies classifier 'FeatureChecker' which is not defined in any feature class diagram.",
+      "User Story us-08-alternate-system.md sequence diagram message 'systemConfigurator->>geoLocationRecord: enableAlternateSystem(alternateSystemId: String)' calls operation 'enableAlternateSystem' which is not defined on class 'GeoLocation' in any class diagram.",
+      "User Story us-08-alternate-system.md sequence diagram message 'geoLocationRecord->>referenceFrameComponent: setAlternateSystem(alternateSystemId: String)' calls operation 'setAlternateSystem' which is not defined on class 'ReferenceFrame' in any class diagram.",
+      "User Story us-08-alternate-system.md sequence diagram message 'systemConfigurator->>geoLocationRecord: clearAlternateSystem()' calls operation 'clearAlternateSystem' which is not defined on class 'GeoLocation' in any class diagram.",
+      "User Story us-08-alternate-system.md sequence diagram message 'geoLocationRecord->>referenceFrameComponent: resetToNaturalUniverse()' calls operation 'resetToNaturalUniverse' which is not defined on class 'ReferenceFrame' in any class diagram.",
+      "User Story us-01-calculate-speed-heading.md sequence diagram lifeline 'locationConsumer' specifies classifier 'LocationConsumer' which is not defined in any feature class diagram.",
+      "User Story us-01-calculate-speed-heading.md sequence diagram lifeline 'velocityCalculator' specifies classifier 'VelocityCalculator' which is not defined in any feature class diagram.",
+      "User Story us-01-calculate-speed-heading.md sequence diagram message 'locationConsumer->>geoLocationRecord: requestSpeedAndHeading(timestamp: String)' calls operation 'requestSpeedAndHeading' which is not defined on class 'GeoLocation' in any class diagram.",
+      "User Story us-05-select-coordinate-system.md sequence diagram lifeline 'locationRecorder' specifies classifier 'LocationRecorder' which is not defined in any feature class diagram.",
+      "User Story us-05-select-coordinate-system.md sequence diagram lifeline 'locationStrategy' specifies classifier 'LocationStrategy' which is not defined in any feature class diagram.",
+      "User Story us-05-select-coordinate-system.md sequence diagram message 'locationRecorder->>geoLocationRecord: setCoordinates(coordinateSystem: String, coordinates: Coordinates)' calls operation 'setCoordinates' which is not defined on class 'GeoLocation' in any class diagram.",
+      "User Story us-05-select-coordinate-system.md sequence diagram message 'locationRecorder->>geoLocationRecord: switchToEllipsoid(coordinates: Coordinates)' calls operation 'switchToEllipsoid' which is not defined on class 'GeoLocation' in any class diagram."
+    ]
+  },
+  "reproduction_case": {
+    "target_file": "",
+    "snippet_type": "text",
+    "snippet_content": ""
+  }
+}

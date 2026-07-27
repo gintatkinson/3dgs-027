@@ -1,0 +1,25 @@
+{
+  "timestamp": "2026-07-27T11:12:26.086160Z",
+  "tooling": {
+    "name": "parity_auditor",
+    "version": "1.0.0"
+  },
+  "context": {
+    "command": "./skills/spec-orchestrator/scripts/verify_model_coverage.py --spec-only",
+    "exit_code": 1,
+    "downstream_repo": "https://github.com/gintatkinson/3dgs-027.git",
+    "commit_hash": "f95de9c82a8f1e2b01d52e51c164eabfd11e1617"
+  },
+  "failure": {
+    "traceback": "",
+    "error_summary": [
+      "Use Case uc-03-configure-geodetic-system.md must contain at least 6 detailed Alternate/Exception flows. Found only 5 flows. (Referenced features define 6 schema validation constraints, requiring at least that many alternate flows, with a minimum floor of 2.)",
+      "Use Case uc-05-record-cartesian-location.md must contain at least 7 detailed Alternate/Exception flows. Found only 5 flows. (Referenced features define 7 schema validation constraints, requiring at least that many alternate flows, with a minimum floor of 2.)"
+    ]
+  },
+  "reproduction_case": {
+    "target_file": "",
+    "snippet_type": "text",
+    "snippet_content": ""
+  }
+}

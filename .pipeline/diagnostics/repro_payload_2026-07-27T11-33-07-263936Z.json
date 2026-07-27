@@ -1,0 +1,26 @@
+{
+  "timestamp": "2026-07-27T11:33:07.263936Z",
+  "tooling": {
+    "name": "parity_auditor",
+    "version": "1.0.0"
+  },
+  "context": {
+    "command": "./skills/spec-orchestrator/scripts/verify_model_coverage.py --spec-only --allow-missing-specs",
+    "exit_code": 1,
+    "downstream_repo": "https://github.com/gintatkinson/3dgs-027.git",
+    "commit_hash": "194259ff458f9dd5c132d0c4d4d1880223abc19d"
+  },
+  "failure": {
+    "traceback": "",
+    "error_summary": [
+      "Use Case uc-11-deploy-chassis-to-rack.md must contain at least 21 detailed Alternate/Exception flows. Found only 16 flows. (Referenced features define 21 schema validation constraints, requiring at least that many alternate flows, with a minimum floor of 2.)",
+      "Use Case uc-09-record-physical-address.md must contain at least 18 detailed Alternate/Exception flows. Found only 17 flows. (Referenced features define 18 schema validation constraints, requiring at least that many alternate flows, with a minimum floor of 2.)",
+      "Use Case uc-10-assign-rack-to-room.md must contain at least 25 detailed Alternate/Exception flows. Found only 20 flows. (Referenced features define 25 schema validation constraints, requiring at least that many alternate flows, with a minimum floor of 2.)"
+    ]
+  },
+  "reproduction_case": {
+    "target_file": "",
+    "snippet_type": "text",
+    "snippet_content": ""
+  }
+}

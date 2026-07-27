@@ -1,0 +1,24 @@
+{
+  "timestamp": "2026-07-27T11:28:11.048381Z",
+  "tooling": {
+    "name": "parity_auditor",
+    "version": "1.0.0"
+  },
+  "context": {
+    "command": "./skills/spec-orchestrator/scripts/verify_model_coverage.py --spec-only --allow-missing-specs",
+    "exit_code": 1,
+    "downstream_repo": "https://github.com/gintatkinson/3dgs-027.git",
+    "commit_hash": "37573ebbea9591329cab038764cca66143edb8c6"
+  },
+  "failure": {
+    "traceback": "",
+    "error_summary": [
+      "User Story us-13-validate-country-code.md sequence diagram message 'physicalAddress->>patternValidator: matches(code: String, regex: String)' calls operation 'matches' which is not defined on class 'PatternValidator' in any class diagram."
+    ]
+  },
+  "reproduction_case": {
+    "target_file": "",
+    "snippet_type": "text",
+    "snippet_content": ""
+  }
+}

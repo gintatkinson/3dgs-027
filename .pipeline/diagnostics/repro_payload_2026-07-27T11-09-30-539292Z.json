@@ -1,0 +1,32 @@
+{
+  "timestamp": "2026-07-27T11:09:30.539292Z",
+  "tooling": {
+    "name": "parity_auditor",
+    "version": "1.0.0"
+  },
+  "context": {
+    "command": "./skills/spec-orchestrator/scripts/verify_model_coverage.py --spec-only",
+    "exit_code": 1,
+    "downstream_repo": "https://github.com/gintatkinson/3dgs-027.git",
+    "commit_hash": "635c6778208b70f70832e0c1814b431503b6a128"
+  },
+  "failure": {
+    "traceback": "",
+    "error_summary": [
+      "Epic epic-01-geo-location-specification.md contains class 'HierarchyManager' with zero relationships. Isolated classes are prohibited.",
+      "Epic epic-01-geo-location-specification.md contains class 'LocationTransformer' with zero relationships. Isolated classes are prohibited.",
+      "Epic epic-01-geo-location-specification.md contains class 'TrajectoryProjector' with zero relationships. Isolated classes are prohibited.",
+      "Epic epic-01-geo-location-specification.md contains class 'LocationInterpreter' with zero relationships. Isolated classes are prohibited.",
+      "Epic epic-01-geo-location-specification.md contains class 'LocationValidator' with zero relationships. Isolated classes are prohibited.",
+      "Epic epic-01-geo-location-specification.md contains class 'SystemConfigurator' with zero relationships. Isolated classes are prohibited.",
+      "Epic epic-01-geo-location-specification.md contains class 'LocationConsumer' with zero relationships. Isolated classes are prohibited.",
+      "Epic epic-01-geo-location-specification.md contains class 'LocationRecorder' with zero relationships. Isolated classes are prohibited.",
+      "Epic epic-01-geo-location-specification.md contains a disconnected UML Class Diagram. Classes ['LocationValidator', 'LocationTransformer', 'TrajectoryProjector', 'LocationRecorder', 'SystemConfigurator', 'LocationConsumer', 'LocationInterpreter', 'HierarchyManager'] are not structurally connected to 'GeoLocation'."
+    ]
+  },
+  "reproduction_case": {
+    "target_file": "",
+    "snippet_type": "text",
+    "snippet_content": ""
+  }
+}
