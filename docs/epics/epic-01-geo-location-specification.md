@@ -75,7 +75,6 @@ classDiagram
     }
     class ReferenceFrame {
         +String alternateSystem [0..1]
-        +Boolean alternateSystems [0..1]
         +String astronomicalBody [0..1]
         +Status setAlternateSystem(String alternateSystemId) [1]
         +Status resetToNaturalUniverse() [1]
