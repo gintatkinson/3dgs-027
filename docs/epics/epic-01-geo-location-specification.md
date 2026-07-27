@@ -24,12 +24,22 @@ The module `ietf-geo-location` provides a reusable YANG grouping that other modu
 ### Associated Use Cases & User Stories
 
 #### Associated Use Cases
-*To be populated after Phase 3*
-<!-- Populated after Phase 3 -->
+- [ ] #16 - [Record Geo-Location Entry](https://github.com/gintatkinson/3dgs-027/blob/main/docs/use-cases/uc-01-record-geo-location-entry.md) (Recording a complete geo-location with coordinates)
+- [ ] #17 - [Configure Reference Frame](https://github.com/gintatkinson/3dgs-027/blob/main/docs/use-cases/uc-02-configure-reference-frame.md) (Setting the astronomical body and alternate system)
+- [ ] #18 - [Configure Geodetic System Parameters](https://github.com/gintatkinson/3dgs-027/blob/main/docs/use-cases/uc-03-configure-geodetic-system.md) (Configuring geodetic datum and accuracy)
+- [ ] #19 - [Record Ellipsoidal Location](https://github.com/gintatkinson/3dgs-027/blob/main/docs/use-cases/uc-04-record-ellipsoidal-location.md) (Recording lat/lon/height coordinates)
+- [ ] #20 - [Record Cartesian Location](https://github.com/gintatkinson/3dgs-027/blob/main/docs/use-cases/uc-05-record-cartesian-location.md) (Recording X/Y/Z coordinates)
+- [ ] #21 - [Track Object Motion with Velocity Vector](https://github.com/gintatkinson/3dgs-027/blob/main/docs/use-cases/uc-06-track-motion-velocity.md) (Recording velocity vector data)
 
 #### Associated User Stories
-*To be populated after Phase 3*
-<!-- Populated after Phase 2 -->
+- [ ] #8 - [Calculate Speed and Heading from Velocity Vector Components](https://github.com/gintatkinson/3dgs-027/blob/main/docs/user-stories/us-01-calculate-speed-heading.md) (Algorithmic derivation of speed and heading)
+- [ ] #9 - [Convert Between Ellipsoidal and Cartesian Coordinate Systems](https://github.com/gintatkinson/3dgs-027/blob/main/docs/user-stories/us-02-coordinate-conversion.md) (Coordinate system transformation calculations)
+- [ ] #10 - [Determine Geo-Location Record Validity and Handle Expiration](https://github.com/gintatkinson/3dgs-027/blob/main/docs/user-stories/us-03-validity-expiration.md) (Temporal validity lifecycle and expiration handling)
+- [ ] #11 - [Project Future Position from Current Location and Velocity Vector](https://github.com/gintatkinson/3dgs-027/blob/main/docs/user-stories/us-04-project-position.md) (Motion-based position projection)
+- [ ] #12 - [Select and Manage Mutually Exclusive Coordinate Representation](https://github.com/gintatkinson/3dgs-027/blob/main/docs/user-stories/us-05-select-coordinate-system.md) (Choice between ellipsoid and cartesian)
+- [ ] #13 - [Resolve Default Reference Frame and Geodetic Datum Values](https://github.com/gintatkinson/3dgs-027/blob/main/docs/user-stories/us-06-resolve-defaults.md) (Default value resolution)
+- [ ] #14 - [Inherit Reference Frame in Nested Location Hierarchies](https://github.com/gintatkinson/3dgs-027/blob/main/docs/user-stories/us-07-inherit-reference-frame.md) (Reference frame inheritance)
+- [ ] #15 - [Configure and Toggle Alternate Coordinate System Support](https://github.com/gintatkinson/3dgs-027/blob/main/docs/user-stories/us-08-alternate-system.md) (Alternate system feature toggle)
 
 ## 3. Architecture
 
