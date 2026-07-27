@@ -55,11 +55,14 @@ classDiagram
         +Integer maxAllocatedPower [0..1]
         +String timestamp [0..1]
         +String validUntil [0..1]
+        +Integer getMaxAllocatedPower() [1]
+        +CapacityResult validatePowerCapacity(String rackId, Integer proposedLoad) [1]
     }
     class RackLocation {
         +String locationRef [0..1]
         +Integer rowNumber [0..1]
         +Integer columnNumber [0..1]
+        +Status assignLocation(String locationRef, Integer rowNumber, Integer columnNumber) [1]
     }
     class RackContainedChassis {
         +Integer relativePosition [1]
@@ -83,6 +86,7 @@ classDiagram
         +Integer getAvailableSlots(String rackId) [1]
         +Integer getRemainingPower(String rackId) [1]
         +Boolean canAccommodate(String rackId, Integer slots, Integer power) [1]
+        +Integer sumChassisPower(String rackId) [1]
     }
     class RackClassifier {
         <<service>>
@@ -92,6 +96,13 @@ classDiagram
     class GridPositionChecker {
         <<service>>
         +Boolean hasCollision(String locationRef, Integer row, Integer col) [1]
+        +Boolean checkRowAndColumn(String locationRef, Integer rowNumber, Integer columnNumber) [1]
+    }
+    class CapacityPlanner {
+        <<external>>
+    }
+    class FacilityManager {
+        <<external>>
     }
 
     Racks *-- Rack
@@ -103,6 +114,8 @@ classDiagram
     Rack --> RackCapacityPlanner
     Rack --> RackClassifier
     RackLocation --> GridPositionChecker
+    CapacityPlanner ..> Rack
+    FacilityManager ..> RackLocation
 ```
 
 ### Subsystem Component Definition

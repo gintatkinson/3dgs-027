@@ -40,6 +40,7 @@ classDiagram
     class Locations {
         <<component>>
         +Location listLocation [0..*]
+        +LocationResult listLocations(String filter) [1]
     }
     class Location {
         +String id [1]
@@ -51,6 +52,12 @@ classDiagram
         +String parent [0..1]
         +String timestamp [0..1]
         +String validUntil [0..1]
+        +Status setParent(String childId, String proposedParentId) [1]
+        +String getType() [1]
+        +String getValidUntil() [1]
+        +AncestorChain getAncestors(String locationId) [1]
+        +DescendantTree getDescendants(String locationId) [1]
+        +DispatchVerification validateForDispatch(String locationId) [1]
     }
     class PhysicalAddress {
         +String address [0..1]
@@ -58,6 +65,7 @@ classDiagram
         +String state [0..1]
         +String city [0..1]
         +String countryCode [0..1]
+        +Status setCountryCode(String code) [1]
     }
     class ContainedChassis {
         +Integer chassisId [1]
@@ -83,9 +91,11 @@ classDiagram
     class HierarchyNavigator {
         <<service>>
         +String buildTree(String rootId) [1]
-        +String getAncestors(String locationId) [1]
-        +String getDescendants(String locationId) [1]
+        +AncestorChain getAncestors(String locationId) [1]
+        +DescendantTree getDescendants(String locationId) [1]
         +Boolean isCyclic(String parentId, String childId) [1]
+        +Location resolveParent(String locationId) [1]
+        +Location findChildren(String parentId) [1]
     }
     class LocationValidator {
         <<service>>
@@ -95,7 +105,32 @@ classDiagram
     }
     class QueryPaginator {
         <<service>>
-        +String fetchPage(Integer offset, Integer limit) [1]
+        +QueryPage fetchPage(Integer offset, Integer limit) [1]
+    }
+    class ManagementClient {
+        <<external>>
+    }
+    class FieldDispatcher {
+        <<external>>
+    }
+    class LocationNavigator {
+        <<external>>
+    }
+    class InventoryManager {
+        <<external>>
+    }
+    class LocationConfigurator {
+        <<external>>
+    }
+    class LocationRecorder {
+        <<external>>
+    }
+    class PatternValidator {
+        <<external>>
+        +Boolean matches(String code, String regex) [1]
+    }
+    class ClockService {
+        <<external>>
     }
 
     NetworkInventory *-- Locations
@@ -109,6 +144,14 @@ classDiagram
     Location --> HierarchyNavigator
     Location --> LocationValidator
     Location --> QueryPaginator
+    ManagementClient ..> Locations
+    FieldDispatcher ..> Location
+    LocationNavigator ..> Location
+    InventoryManager ..> Locations
+    LocationConfigurator ..> Location
+    LocationRecorder ..> PhysicalAddress
+    PatternValidator ..> PhysicalAddress
+    ClockService ..> Location
 ```
 
 ### Subsystem Component Definition
