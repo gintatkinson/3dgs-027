@@ -14,7 +14,6 @@ This Epic defines the functional requirements for specifying a geographic locati
 The module `ietf-geo-location` provides a reusable YANG grouping that other modules can use to add geolocation capabilities to their data models. It supports both standard Earth-based coordinate systems (lat/lon/height with WGS-84) and extended capabilities for non-Earth astronomical bodies, alternate reference systems, and velocity tracking.
 
 ## 2. Requirements & Checklist
-
 - [ ] #1 - [Geo-Location Container](https://github.com/gintatkinson/3dgs-027/blob/main/docs/features/feat-01-geo-location-container.md) (Root container holding timestamp and validity metadata for the entire location record)
 - [ ] #2 - [Reference Frame](https://github.com/gintatkinson/3dgs-027/blob/main/docs/features/feat-02-reference-frame.md) (Defines the spatial frame of reference including astronomical body and optional alternate system)
 - [ ] #3 - [Geodetic System](https://github.com/gintatkinson/3dgs-027/blob/main/docs/features/feat-03-geodetic-system.md) (Specifies the geodetic datum and coordinate/height accuracy parameters)
@@ -25,9 +24,11 @@ The module `ietf-geo-location` provides a reusable YANG grouping that other modu
 ### Associated Use Cases & User Stories
 
 #### Associated Use Cases
+*To be populated after Phase 3*
 <!-- Populated after Phase 3 -->
 
 #### Associated User Stories
+*To be populated after Phase 3*
 <!-- Populated after Phase 2 -->
 
 ## 3. Architecture
@@ -218,5 +219,5 @@ The geo-location grouping conveys potentially sensitive location data. Implement
 - **Schema Validation**: All geo-location data MUST be validated against the YANG schema constraints (patterns, ranges, types) before storage. Invalid data MUST be rejected at the schema validation boundary.
 
 ## 6. Source References
-Structural Schema: [ietf-geo-location.yang](https://github.com/YangModels/yang/blob/main/standard/ietf/RFC/ietf-geo-location%402022-02-11.yang)
+Structural Schema: [ietf-geo-location.yang](https://github.com/gintatkinson/3dgs-027/blob/main/standard/ietf/RFC/ietf-geo-location%402022-02-11.yang)
 Normative Specification: [RFC 9179 - A YANG Grouping for Geographic Locations](https://datatracker.ietf.org/doc/rfc9179/)
