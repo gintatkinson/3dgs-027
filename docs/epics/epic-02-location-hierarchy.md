@@ -24,12 +24,18 @@ This Epic groups the Locations Container, Location Entity, Physical Address, and
 ### Associated Use Cases & User Stories
 
 #### Associated Use Cases
-*To be populated after Phase 3*
-<!-- Populated after Phase 3 -->
+- [ ] #40 - [Register Physical Location in Inventory](https://github.com/gintatkinson/3dgs-027/blob/main/docs/use-cases/uc-07-register-physical-location.md) (Creating location entries in the inventory)
+- [ ] #41 - [Manage Location Hierarchy](https://github.com/gintatkinson/3dgs-027/blob/main/docs/use-cases/uc-08-manage-location-hierarchy.md) (Configuring parent-child location structures)
+- [ ] #42 - [Record Physical Address for Location](https://github.com/gintatkinson/3dgs-027/blob/main/docs/use-cases/uc-09-record-physical-address.md) (Recording postal address data)
+- [ ] #45 - [Deploy Chassis Directly to Location](https://github.com/gintatkinson/3dgs-027/blob/main/docs/use-cases/uc-12-deploy-chassis-to-location.md) (Chassis deployment without rack)
 
 #### Associated User Stories
-*To be populated after Phase 2*
-<!-- Populated after Phase 2 -->
+- [ ] #32 - [Paginate Large Location Query Results](https://github.com/gintatkinson/3dgs-027/blob/main/docs/user-stories/us-09-paginate-location-queries.md) (Pagination for large location inventories)
+- [ ] #33 - [Verify Location Completeness for Field Dispatch](https://github.com/gintatkinson/3dgs-027/blob/main/docs/user-stories/us-10-verify-dispatch-readiness.md) (Pre-dispatch verification of location data)
+- [ ] #34 - [Traverse and Resolve Nested Location Hierarchies](https://github.com/gintatkinson/3dgs-027/blob/main/docs/user-stories/us-11-traverse-location-hierarchy.md) (Hierarchy traversal and tree resolution)
+- [ ] #35 - [Filter Locations by Custom Type Classification](https://github.com/gintatkinson/3dgs-027/blob/main/docs/user-stories/us-12-filter-locations-by-type.md) (Type-based filtering)
+- [ ] #36 - [Validate Physical Address Country Code Format](https://github.com/gintatkinson/3dgs-027/blob/main/docs/user-stories/us-13-validate-country-code.md) (Country code pattern validation)
+- [ ] #37 - [Detect and Prevent Circular Location Hierarchy References](https://github.com/gintatkinson/3dgs-027/blob/main/docs/user-stories/us-14-detect-location-cycle.md) (Cycle detection in location hierarchies)
 
 ## 3. Architecture
 

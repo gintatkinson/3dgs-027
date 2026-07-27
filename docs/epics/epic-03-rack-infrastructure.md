@@ -24,12 +24,12 @@ This Epic groups the Racks Container, Rack Entity, Rack Location, and Rack Conta
 ### Associated Use Cases & User Stories
 
 #### Associated Use Cases
-*To be populated after Phase 3*
-<!-- Populated after Phase 3 -->
+- [ ] #43 - [Assign Rack to Equipment Room](https://github.com/gintatkinson/3dgs-027/blob/main/docs/use-cases/uc-10-assign-rack-to-room.md) (Rack registration and location assignment)
+- [ ] #44 - [Deploy Chassis to Rack Slot](https://github.com/gintatkinson/3dgs-027/blob/main/docs/use-cases/uc-11-deploy-chassis-to-rack.md) (Chassis installation in rack slots)
 
 #### Associated User Stories
-*To be populated after Phase 2*
-<!-- Populated after Phase 2 -->
+- [ ] #38 - [Verify Rack Power Capacity Against Deployed Chassis Loads](https://github.com/gintatkinson/3dgs-027/blob/main/docs/user-stories/us-15-verify-rack-power-capacity.md) (Power capacity verification)
+- [ ] #39 - [Detect Rack Grid Position Collisions Within a Location](https://github.com/gintatkinson/3dgs-027/blob/main/docs/user-stories/us-16-detect-rack-grid-collisions.md) (Grid position collision detection)
 
 ## 3. Architecture
 
